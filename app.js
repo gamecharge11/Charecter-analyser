@@ -31,7 +31,7 @@ function find () {
             document.getElementById('show').innerHTML="The text you have entered contains " + final.length + " words."
         } else if (what.value == 'sentence') {
             var sentences = splitMulti(value, ['?', '.', '!'])
-            document.getElementById('show').innerHTML="The text you have entered contains " + Number(sentences.length - 2) + " sentences."
+            document.getElementById('show').innerHTML="The text you have entered contains " + Number(sentences.length - 1) + " sentences."
         } else if (what.value == 'alphabet') {
             var split = Array.from(value)
             for (let i=0;i<split.length;i++) {
