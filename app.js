@@ -36,6 +36,7 @@ function find () {
             document.getElementById('show').innerHTML="The text you have entered contains " + letters + " letters"
         }
     } else {
+        document.getElementById('output').style.visibility="hidden"
         alert("Please enter some text")
     }
 }
