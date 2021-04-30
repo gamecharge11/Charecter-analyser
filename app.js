@@ -20,10 +20,18 @@ function find () {
     if (text.value != ""){ 
         if (what.value == 'word') {
             var words = value.split(' ')
-            document.getElementById('show').innerHTML="The text you have entered contains " + words.length + " words."
+            var final = []
+            for (let j = 0;j<words.length;j++) {
+                if (words[j] != '.') {
+                    final.push(words[j])
+                } else {
+                    continue
+                }
+            }
+            document.getElementById('show').innerHTML="The text you have entered contains " + final.length + " words."
         } else if (what.value == 'sentence') {
             var sentences = splitMulti(value, ['?', '.', '!'])
-            document.getElementById('show').innerHTML="The text you have entered contains " + Number(sentences.length - 1) + " sentences."
+            document.getElementById('show').innerHTML="The text you have entered contains " + Number(sentences.length - 2) + " sentences."
         } else if (what.value == 'alphabet') {
             var split = Array.from(value)
             for (let i=0;i<split.length;i++) {
